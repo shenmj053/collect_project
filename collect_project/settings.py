@@ -19,6 +19,8 @@ STATIC_PATH = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+LOGIN_URL = '/rango/login/'
+
 # print os.path.abspath(__file__)
 # print os.path.dirname(os.path.abspath(__file__))
 # print os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
