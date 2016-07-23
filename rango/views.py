@@ -9,8 +9,8 @@ def index(request):
     
     context_dict = {}
     
-    category_list = Category.objects.order_by('-likes')[:5]
-    pages = Page.objects.order_by('-views')[:5]
+    category_list = Category.objects.order_by('-likes')[:10]
+    pages = Page.objects.order_by('-views')[:10]
     
     context_dict['categories'] = category_list
     context_dict['pages'] = pages
@@ -150,14 +150,8 @@ def user_logout(request):
 
 @login_required
 def restricted(request):
-    return HttpResponse("Since you're logged in, you can see this text!")
-
-
-
-
-
-
+    return render(request, 'rango/restricted.html', {})
 
 
 def about(request):
-    return render(request, 'rango/about.html')
+    return render(request, 'rango/about.html', {})
