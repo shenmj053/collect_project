@@ -6,5 +6,6 @@
 
 {% block body_block %}
 <a href="{% url 'index' %}">Index</a><br/>
+<p>visits: {{ visits }}</p>
 <img src="{% static "images/about.jpg" %}" alt="Picture of About"/>
 {% endblock %}
